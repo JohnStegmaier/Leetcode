@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsing a Boolean Expression</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+        <a href="/">Home</a>
+        <a href="/questions">Questions</a>
+    </div>
+    <button id="toggle-btn" class="toggle-btn">Toggle Dark Mode</button> <!-- Updated ID -->
+</div>
+
+<div class="container">
+    <h1>Parsing a Boolean Expression</h1>
+    <p>A boolean expression is an expression that evaluates to either <strong>true</strong> or <strong>false</strong>.
+        It can be in one of the following shapes:</p>
+    <ul>
+        <li><code>'t'</code> that evaluates to <strong>true</strong>.</li>
+        <li><code>'f'</code> that evaluates to <strong>false</strong>.</li>
+        <li><code>'!(subExpr)'</code> that evaluates to the logical NOT of the inner expression <code>subExpr</code>.</li>
+        <li><code>'&(subExpr1, subExpr2, ..., subExprn)'</code> that evaluates to the logical AND of the inner expressions
+            <code>subExpr1, subExpr2, ..., subExprn</code> where <code>n >= 1</code>.</li>
+        <li><code>'|(subExpr1, subExpr2, ..., subExprn)'</code> that evaluates to the logical OR of the inner expressions
+            <code>subExpr1, subExpr2, ..., subExprn</code> where <code>n >= 1</code>.</li>
+    </ul>
+    <h2>Task:</h2>
+    <p>Given a string <code>expression</code> that represents a boolean expression, return the evaluation of that expression.</p>
+    <div class="expression-examples">
+        <h3>Example Input/Output</h3>
+        <p><strong>Input:</strong> <code>expression = "|(t,f)"</code></p>
+        <p><strong>Output:</strong> <code>true</code></p>
+        <p><strong>Input:</strong> <code>expression = "&(t,f)"</code></p>
+        <p><strong>Output:</strong> <code>false</code></p>
+        <p><strong>Input:</strong> <code>expression = "!(t)"</code></p>
+        <p><strong>Output:</strong> <code>false</code></p>
+    </div>
+    <h2>Constraints:</h2>
+    <ul>
+        <li>The given expression is valid and follows the rules above.</li>
+        <li>The expression consists of the characters <code>'t'</code>, <code>'f'</code>, <code>'!'</code>, <code>'&'</code>, <code>'|'</code>, <code>'('</code>, <code>')'</code>, and <code>','</code>.</li>
+        <li><code>1 <= expression.length <= 20000</code></li>
+    </ul>
+</div>
+
+<script th:src="@{/js/dark-mode.js}"></script>
+</body>
+</html>
