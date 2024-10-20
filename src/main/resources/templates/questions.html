@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Available Questions</title>
+</head>
+<body>
+<h1>Here are the available questions:</h1>
+<ul>
+    <li th:each="question : ${questions}">
+        <a th:href="@{${question.url}}" th:text="${question.title}"></a>
+    </li>
+</ul>
+</body>
+</html>

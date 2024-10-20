@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Subtraction</title>
+</head>
+<body>
+<h1>Subtraction Question</h1>
+<p th:text="${description}">Default Description</p>
+
+<form action="/questions/subtraction" method="post">
+    <label for="numbers">Enter numbers:</label>
+    <input type="text" id="numbers" name="numbers">
+    <button type="submit">Submit</button>
+</form>
+
+<p th:text="${result}"></p>
+
+<a href="/questions">Back to Home</a>
+</body>
+</html>
