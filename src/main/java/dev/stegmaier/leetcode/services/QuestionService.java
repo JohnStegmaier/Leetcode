@@ -10,6 +10,7 @@ public class QuestionService {
 
   // Method to retrieve all questions (for now, we're hardcoding them)
   public List<Question> getAllQuestions() {
+
     return Arrays.asList(
         new Question(1, "Addition Question", "/questions/addition"),
         new Question(2, "Subtraction Question", "/questions/subtraction"),
