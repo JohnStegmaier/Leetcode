@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subtraction</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
 </head>
 <body>
-<h1>Subtraction Question</h1>
-<p th:text="${description}">Default Description</p>
 
-<form action="/questions/subtraction" method="post">
-    <label for="numbers">Enter numbers:</label>
-    <input type="text" id="numbers" name="numbers">
-    <button type="submit">Submit</button>
-</form>
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+        <a href="/">Home</a>
+        <a href="/questions">Questions</a>
+    </div>
+    <button id="toggle-btn" class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
 
-<p th:text="${result}"></p>
+<div class="container">
+    <h1>Subtraction Question</h1>
+    <p th:text="${description}">Default Description</p>
 
-<a href="/questions">Back to Home</a>
+    <form action="/questions/subtraction" method="post">
+        <label for="numbers">Enter numbers:</label>
+        <input type="text" id="numbers" name="numbers">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p th:text="${result}"></p>
+
+</div>
+
+<script src="/js/dark-mode.js"></script>
 </body>
 </html>

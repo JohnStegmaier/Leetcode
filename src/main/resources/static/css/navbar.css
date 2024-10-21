@@ -1,0 +1,50 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Added padding for spacing */
+    background-color: #fff; /* Light mode background */
+    border-bottom: 1px solid #ccc; /* Optional: adds a border for separation */
+    transition: background-color 0.3s, color 0.3s; /* For dark mode transition */
+    position: sticky; /* Change to sticky to avoid overlap */
+    top: 0; /* Sticks to the top */
+    z-index: 1; /* Ensures it stays above other elements */
+}
+
+.navbar.dark-mode {
+    background-color: #444; /* Dark mode background for navbar */
+    color: #f7f7f7; /* Text color for dark mode */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: #0056b3;
+}
+
+.navbar .toggle-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar .toggle-btn.dark-mode {
+    background-color: #666; /* Darker background for button in dark mode */
+    color: #f7f7f7; /* Text color for button in dark mode */
+}
+
+.navbar.no-transition {
+    transition: none;
+}
+
+.toggle-btn.no-transition {
+    transition: none;
+}

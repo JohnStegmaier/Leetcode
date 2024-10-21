@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0; /* Removed padding to avoid clipping */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #2e2e2e; /* Dark mode background */
+    color: #f7f7f7; /* Text color for body in dark mode */
+}
+
+.container {
+    padding: 20px; /* Adjusted padding */
+    margin: 20px auto; /* Margin for spacing from navbar */
+    background-color: white; /* Light mode background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container.dark-mode {
+    background-color: #444; /* Dark mode background for container */
+    color: #f0f0f0; /* Text color for container in dark mode */
+}
+
+h1, h2, p {
+    margin: 0 0 20px; /* Consistent margin for spacing */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+body.dark-mode code {
+    background-color: #555; /* Code block background in dark mode */
+}
+
+.expression-examples {
+    background-color: #eef; /* Light mode background for examples */
+    border-left: 4px solid #88a;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+body.dark-mode .expression-examples {
+    background-color: #555; /* Dark mode background for examples */
+    border-left-color: #ccc; /* Border color for examples in dark mode */
+}
+
+body.no-transition {
+    transition: none;
+}
+
+.container.no-transition {
+    transition: none;
+}
