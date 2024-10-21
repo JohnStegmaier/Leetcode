@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
 
-    @GetMapping
-    public String home(Model model) {
-        model.addAttribute("welcomeMessage", "Welcome to the Home Page!");
-        return "home"; // Maps to home.html
-    }
-
+  @GetMapping
+  public String home(Model model) {
+    model.addAttribute("welcomeMessage", "Welcome to the Home Page!");
+    return "home"; // Maps to home.html
+  }
 }
