@@ -67,6 +67,13 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>dev.stegmaier.leetcode.LeetcodeApplication</mainClass> <!-- Adjust if needed -->
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
                 <version>2.2.1</version>
