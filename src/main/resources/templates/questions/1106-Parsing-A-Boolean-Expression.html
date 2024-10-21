@@ -15,7 +15,7 @@
         <a href="/">Home</a>
         <a href="/questions">Questions</a>
     </div>
-    <button id="toggle-btn" class="toggle-btn">Toggle Dark Mode</button> <!-- Updated ID -->
+    <button id="toggle-btn" class="toggle-btn">Toggle Dark Mode</button>
 </div>
 
 <div class="container">
@@ -33,6 +33,7 @@
     </ul>
     <h2>Task:</h2>
     <p>Given a string <code>expression</code> that represents a boolean expression, return the evaluation of that expression.</p>
+
     <div class="expression-examples">
         <h3>Example Input/Output</h3>
         <p><strong>Input:</strong> <code>expression = "|(t,f)"</code></p>
@@ -42,10 +43,22 @@
         <p><strong>Input:</strong> <code>expression = "!(t)"</code></p>
         <p><strong>Output:</strong> <code>false</code></p>
     </div>
+
+    <h2>Submit Your Expression:</h2>
+    <form action="/questions/1106-Parsing-A-Boolean-Expression" method="post">
+        <label for="expression">Enter Boolean Expression:</label>
+        <input type="text" id="expression" name="expression" required>
+        <button type="submit">Evaluate</button>
+    </form>
+
+    <p th:if="${result != null}">
+        <strong>Result:</strong> <span th:text="${result}"></span>
+    </p>
+
     <h2>Constraints:</h2>
     <ul>
         <li>The given expression is valid and follows the rules above.</li>
-        <li>The expression consists of the characters <code>'t'</code>, <code>'f'</code>, <code>'!'</code>, <code>'&'</code>, <code>'|'</code>, <code>'('</code>, <code>')'</code>, and <code>','</code>.</li>
+        <li>The expression consists of the characters <code>'t'</code>, <code>'f'</code>, <code>'!'</code>, <code>'&'</code>, <code>|</code>, <code>'('</code>, <code>')'</code>, and <code>','</code>.</li>
         <li><code>1 <= expression.length <= 20000</code></li>
     </ul>
 </div>
