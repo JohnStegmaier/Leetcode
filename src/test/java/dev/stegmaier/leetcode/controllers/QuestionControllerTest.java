@@ -8,9 +8,7 @@ import dev.stegmaier.leetcode.models.Question;
 import dev.stegmaier.leetcode.services.QuestionService;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,11 +35,11 @@ class QuestionControllerTest {
 
     // Act & Assert
     mockMvc
-            .perform(get("/questions"))
-            .andExpect(status().isOk())
-            .andExpect(view().name("questions"))
-            .andExpect(model().attributeExists("questions"))
-            .andExpect(model().attribute("questions", questions));
+        .perform(get("/questions"))
+        .andExpect(status().isOk())
+        .andExpect(view().name("questions"))
+        .andExpect(model().attributeExists("questions"))
+        .andExpect(model().attribute("questions", questions));
 
     verify(questionService, times(1)).getAllQuestions();
   }

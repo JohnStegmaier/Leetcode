@@ -44,12 +44,15 @@ class Q1106ParsingABooleanExpressionControllerTest {
   @Test
   void testHandleQuestion1106Input_InvalidExpression() throws Exception {
     // Mocking service to throw an IllegalArgumentException
-    when(booleanParsingService.parseExpression("invalid")).thenThrow(new IllegalArgumentException());
+    when(booleanParsingService.parseExpression("invalid"))
+        .thenThrow(new IllegalArgumentException());
 
     mockMvc
-            .perform(post("/questions/1106-Parsing-A-Boolean-Expression").param("expression", "invalid"))
-            .andExpect(status().isOk())
-            .andExpect(model().attribute("result", "Invalid input. Please enter a valid boolean expression."))
-            .andExpect(view().name("questions/1106-Parsing-A-Boolean-Expression"));
+        .perform(
+            post("/questions/1106-Parsing-A-Boolean-Expression").param("expression", "invalid"))
+        .andExpect(status().isOk())
+        .andExpect(
+            model().attribute("result", "Invalid input. Please enter a valid boolean expression."))
+        .andExpect(view().name("questions/1106-Parsing-A-Boolean-Expression"));
   }
 }
