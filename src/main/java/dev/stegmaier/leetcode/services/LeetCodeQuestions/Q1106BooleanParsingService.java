@@ -2,7 +2,6 @@ package dev.stegmaier.leetcode.services.LeetCodeQuestions;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-import dev.stegmaier.leetcode.controllers.questions.Q1106ParsingABooleanExpressionController;
 import java.util.Stack;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Q1106BooleanParsingService {
 
-  private static final Logger log = getLogger(Q1106ParsingABooleanExpressionController.class);
+  private static final Logger log = getLogger(Q1106BooleanParsingService.class);
 
   public boolean parseExpression(String expression) {
     log.debug("Parsing expression: {}", expression);
