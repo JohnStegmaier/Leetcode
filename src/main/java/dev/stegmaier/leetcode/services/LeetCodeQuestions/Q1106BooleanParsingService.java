@@ -37,7 +37,7 @@ public class Q1106BooleanParsingService {
   }
 
   void evaluate(Stack<Character> optr, Stack<Character> operand) {
-    log.info("evaluating a: {}", optr);
+    log.trace("evaluating: {}", optr);
     char op = optr.pop(); // Get the operator at the top and remove it
     boolean ans;
 
