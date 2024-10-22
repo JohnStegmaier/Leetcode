@@ -40,7 +40,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/') || !contains(github.ref, '-SNAPSHOT')
       run: |
         mvn versions:set -DnewVersion=${{ github.event.release.tag_name }}
-        mvn clean deploy --settings .github/maven-settings.xml
+        mvn clean deploy
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
