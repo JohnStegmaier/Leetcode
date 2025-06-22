@@ -19,7 +19,7 @@ class QuestionServiceTest {
     assertEquals(4, questions.size(), "Expected 4 questions in the list");
 
     // Verify the details of each question
-    Question q1 = questions.get(0);
+    Question q1 = questions.getFirst();
     assertEquals(1, q1.getId());
     assertEquals("Addition Question", q1.getTitle());
     assertEquals("/questions/addition", q1.getUrl());
