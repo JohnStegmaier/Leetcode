@@ -15,6 +15,9 @@ public class QuestionService {
         new Question(1, "Addition Question", "/questions/addition"),
         new Question(2, "Subtraction Question", "/questions/subtraction"),
         new Question(
-            3, "Parsing A Boolean Expression", "/questions/1106-Parsing-A-Boolean-Expression"));
+            3, "Parsing A Boolean Expression", "/questions/1106-Parsing-A-Boolean-Expression"),
+        new Question(
+                    4, "Minimum Deletions To Make String K-Special", "/questions/3085-Minimum-Deletions-To-Make-String-K-Special")
+            );
   }
 }

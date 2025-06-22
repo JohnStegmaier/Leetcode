@@ -16,7 +16,7 @@ class QuestionServiceTest {
     List<Question> questions = questionService.getAllQuestions();
 
     // Verify the size of the list
-    assertEquals(3, questions.size(), "Expected 3 questions in the list");
+    assertEquals(4, questions.size(), "Expected 4 questions in the list");
 
     // Verify the details of each question
     Question q1 = questions.get(0);

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Deletions To Make String K-Special</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+        <a href="/">Home</a>
+        <a href="/questions">Questions</a>
+    </div>
+    <button id="toggle-btn" class="toggle-btn">Toggle Dark Mode</button>
+</div>
+
+<div class="container">
+    <h1>Minimum Deletions To Make String K-Special</h1>
+    <p>You are given a string <code>word</code> and an integer<code>k</code>.</p>
+    <p>We consider <code>word</code> to be <strong>k-special</strong> if <code>|freq(word[i]) - freq(word[j]) | <=k</code> for all indices <code>i</code> and <code>j</code> in the string.</p>
+    <p>Here, <code>freq(x)</code> denotes the frequency of the character <code>x</code> in <code>word</code>, and <code>|y|</code> denotes the absolute value of <code>y</code>.</p>
+    <p>Return <em>the <strong>minimum</strong> number of characters you need to delete to make <code>word</code> <strong>k-special</strong></em>.</p>
+    <div class="expression-examples">
+        <h3>Example 1:</h3>
+        <p><strong>Input:</strong> <code>word = "aabcaba", k = 0</code></p>
+        <p><strong>Output:</strong> <code>3</code></p>
+        <p><strong>Explanation:</strong> We can make <code>word</code> <code>0</code>-special by deleting <code>2</code> occurrences of <code>"a"</code> and <code>1</code> occurrence of <code>"c"</code>. Therefore, <code>word</code> becomes equal to <code>"baba"</code> where <code>freq('a') == freq('b') == 2</code>.</p>
+    </div>
+    <div class="expression-examples">
+        <h3>Example 2:</h3>
+        <p><strong>Input:</strong> <code>word = "dabdcbdcdcd", k = 2</code></p>
+        <p><strong>Output:</strong> <code>2</code></p>
+        <p><strong>Explanation:</strong> We can make <code>word</code> <code>2</code>-special by deleting <code>1</code> occurrences of <code>"a"</code> and <code>1</code> occurrence of <code>"d"</code>. Therefore, <code>word</code> becomes equal to <code>"bdcbdcdcd"</code> where <code>freq('b') == 2</code>, <code>freq('c') == 3</code>, and <code>freq('d') == 4</code>.</p>
+    </div>
+    <div class="expression-examples">
+        <h3>Example 3:</h3>
+        <p><strong>Input:</strong> <code>word = "aaabaaa", k = 2</code></p>
+        <p><strong>Output:</strong> <code>1</code></p>
+        <p><strong>Explanation:</strong> We can make <code>word</code> <code>2</code>-special by deleting <code>1</code> occurrence of <code>"b"</code>. Therefore, <code>word</code> becomes equal to <code>"aaaaaa"</code> where each letter's frequency is now uniformly <code>6</code>.</p>
+    </div>
+
+    <h2>Submit Your Expression:</h2>
+    <form action="/questions/3085-Minimum-Deletions-To-Make-String-K-Special" method="post">
+        <label for="expression">Enter a string of lower case letters and a value for k:</label>
+        <input type="text" id="expression" name="expression" required>
+        <input type="number" id="kValue" name="kValue" required>
+        <button type="submit">Evaluate K</button>
+    </form>
+
+    <p th:if="${result != null}">
+        <strong>Result:</strong> <span th:text="${result}"></span>
+    </p>
+
+    <h2>Constraints:</h2>
+    <ul>
+        <li><code>1 <= word.length <= 10⁵</code></li>
+        <li><code>0 <= k <= 10⁵</code></li>
+        <li><code>word</code> consists only of lowercase English letters.</li>
+    </ul>
+</div>
+
+<script th:src="@{/js/dark-mode.js}"></script>
+</body>
+</html>

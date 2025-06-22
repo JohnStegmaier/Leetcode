@@ -9,7 +9,7 @@ import dev.stegmaier.leetcode.services.LeetCodeQuestions.Q1106BooleanParsingServ
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(Q1106ParsingABooleanExpressionController.class)
@@ -17,7 +17,7 @@ class Q1106ParsingABooleanExpressionControllerTest {
 
   @Autowired private MockMvc mockMvc;
 
-  @MockBean private Q1106BooleanParsingService booleanParsingService;
+  @MockitoBean  private Q1106BooleanParsingService booleanParsingService;
 
   @Test
   void testQuestion1106PageLoads() throws Exception {
