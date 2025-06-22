@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.4</version>
+        <version>3.5.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dev.stegmaier</groupId>
@@ -28,8 +28,10 @@
     </scm>
     <properties>
         <java.version>23</java.version>
-        <mvn-fmt-plugin.version>2.25</mvn-fmt-plugin.version>
-        <lombok.version>1.18.34</lombok.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <mvn-fmt-plugin.version>2.27</mvn-fmt-plugin.version>
+        <lombok.version>1.18.38</lombok.version>
+        <asciidoctor-plugin.version>3.2.0</asciidoctor-plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -70,13 +72,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>dev.stegmaier.leetcode.LeetcodeApplication</mainClass> <!-- Adjust if needed -->
+                    <mainClass>dev.stegmaier.leetcode.LeetcodeApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>${asciidoctor-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-docs</id>
@@ -99,10 +101,6 @@
                 </dependencies>
             </plugin>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>com.spotify.fmt</groupId>
                 <artifactId>fmt-maven-plugin</artifactId>
                 <version>${mvn-fmt-plugin.version}</version>
@@ -117,7 +115,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version> <!-- or the latest version -->
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
