@@ -17,15 +17,26 @@ public class Q3085MinimumDeletionService {
   }
 
   private void checkExpressionMeetsRequirements(String expression) {
-    if(null == expression) {
+    validateExpressionIsNotNull(expression);
+    validateExpressionIsLargerThanOneCharacterLong(expression);
+    validateExpressionIsSmallerThanOneHundredThousandCharacters(expression);
+  }
+
+  private void validateExpressionIsNotNull(String expression) {
+    if (null == expression) {
       throw new NullPointerException("expression is somehow null");
     }
+  }
+
+  private void validateExpressionIsLargerThanOneCharacterLong(String expression) {
     if (expression.isEmpty()) {
       throw new IllegalArgumentException("expression length less than 1");
     }
-    if(expression.length() > 100000) {
+  }
+
+  private void validateExpressionIsSmallerThanOneHundredThousandCharacters(String expression) {
+    if (expression.length() > 100000) {
       throw new IllegalArgumentException("expression length exceeds 10⁵");
     }
-
   }
 }
