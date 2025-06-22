@@ -43,7 +43,7 @@ public class Q3085MinimumDeletionstoMakeStringKSpecialController {
     response.setHeader("X-Correlation-ID", correlationID);
 
     return "questions/3085-Minimum-Deletions-To-Make-String-K-Special"; // Refers to addition.html
-                                                                        // template
+    // template
   }
 
   // Display the question page for Leetcode Question #1106
@@ -85,6 +85,6 @@ public class Q3085MinimumDeletionstoMakeStringKSpecialController {
     response.setHeader("X-Correlation-ID", correlationID);
 
     return "questions/3085-Minimum-Deletions-To-Make-String-K-Special"; // Refers to addition.html
-                                                                        // template
+    // template
   }
 }
