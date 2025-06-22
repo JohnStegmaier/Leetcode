@@ -17,7 +17,7 @@ class Q1106ParsingABooleanExpressionControllerTest {
 
   @Autowired private MockMvc mockMvc;
 
-  @MockitoBean  private Q1106BooleanParsingService booleanParsingService;
+  @MockitoBean private Q1106BooleanParsingService booleanParsingService;
 
   @Test
   void testQuestion1106PageLoads() throws Exception {

@@ -1,11 +1,9 @@
 package dev.stegmaier.leetcode.services.LeetCodeQuestions;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
-
-import java.util.Stack;
-
-import static org.slf4j.LoggerFactory.getLogger;
 
 @Component
 public class Q3085MinimumDeletionService {
